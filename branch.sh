@@ -9,3 +9,5 @@ git checkout $PROD_BRANCH
 git reset --hard origin/$PROD_BRANCH
 
 git checkout -B $NEW_BRANCH
+
+git push origin $NEW_BRANCH
