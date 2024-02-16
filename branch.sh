@@ -11,3 +11,5 @@ git reset --hard origin/$PROD_BRANCH
 git checkout -B $NEW_BRANCH
 
 git push origin $NEW_BRANCH
+
+echo "Created and checked out new branch '$NEW_BRANCH' based on main"
