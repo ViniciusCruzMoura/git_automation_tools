@@ -3,7 +3,7 @@
 # SOURCE_BRANCH="main"
 # NEW_BRANCH="update-$USER-$(date +'%Y%m%d%H%M%S')"
 SOURCE_BRANCH=$(git branch --show-current)
-NEW_BRANCH="update-$USER-$(date +'%Y%m%d')"
+NEW_BRANCH="update-$USER-$(date +'%y%m%d')"
 
 git fetch --all
 git pull origin $SOURCE_BRANCH
