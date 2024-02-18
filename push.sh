@@ -27,3 +27,5 @@ git commit -m "$COMMIT_MSG"
 git push origin $SOURCE_BRANCH
 
 git fetch --prune --prune-tags
+
+echo "Push complete"
