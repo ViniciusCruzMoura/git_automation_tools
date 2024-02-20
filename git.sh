@@ -79,6 +79,20 @@ push() {
     echo "Push complete"
 }
 
+tag() {
+    # git tag -l | xargs git tag -d
+    # git fetch --tags
+    git fetch --prune --prune-tags
+
+    while [[ -z "$TAG" ]]; do
+        echo "Enter the tag version:"
+        read TAG;
+    done
+
+    git tag $TAG
+    git push origin $TAG
+}
+
 case $1 in
 	-help|--help|help)
 		echo "These are common commands used in various situations:"
@@ -94,6 +108,10 @@ case $1 in
 		;;
     -push|--push|push)
 		push
+		exit 0
+		;;
+    -tag|--tag|tag)
+		tag
 		exit 0
 		;;
 	*)
